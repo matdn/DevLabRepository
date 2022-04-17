@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #D0F1D5; }
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  section .head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; }
+    section .head .letter {
+      display: flex;
+      justify-content: center;
+      width: 100%; }
+    section .head :nth-child(1) {
+      animation: spanFadeIn 1000ms ease; }
+    section .head :nth-child(2) {
+      animation: spanFadeIn 1100ms ease; }
+    section .head :nth-child(3) {
+      animation: spanFadeIn 1300ms ease; }
+    section .head :nth-child(4) {
+      animation: spanFadeIn 1400ms ease; }
+    section .head :nth-child(5) {
+      animation: spanFadeIn 1500ms ease; }
+    section .head :nth-child(6) {
+      animation: spanFadeIn 1600ms ease; }
+    section .head :nth-child(7) {
+      animation: spanFadeIn 1700ms ease; }
+    section .head :nth-child(8) {
+      animation: spanFadeIn 1800ms ease; }
+    section .head :nth-child(9) {
+      animation: spanFadeIn 1900ms ease; }
+    section .head h1 {
+      font-family: poppins black, sans-serif;
+      font-size: 115px;
+      font-weight: 1200;
+      text-transform: uppercase;
+      color: #EE6055;
+      background-color: transparent; }
+      section .head h1 > span {
+        overflow: hidden;
+        display: block; }
+        section .head h1 > span > span {
+          display: block;
+          animation: spanFadeIn 1000ms ease; }
+  section .circles {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: blue; }
+    section .circles div {
+      height: 150px;
+      width: 150px;
+      background-color: #EE6055;
+      border-radius: 200px;
+      position: absolute; }
+    section .circles :nth-child(1) {
+      bottom: 300px;
+      left: 160px;
+      height: 250px;
+      width: 250px; }
+    section .circles :nth-child(2) {
+      top: 80px;
+      right: 40px; }
+    section .circles :nth-child(3) {
+      bottom: 200px;
+      right: 60px; }
+    section .circles :nth-child(4) {
+      top: 0;
+      right: 400px;
+      height: 300px;
+      width: 300px; }
+    section .circles :nth-child(5) {
+      bottom: 500px;
+      right: 200px; }
+    section .circles :nth-child(6) {
+      top: 350px;
+      right: 250px;
+      height: 250px;
+      width: 250px; }
+    section .circles :nth-child(7) {
+      bottom: 500px;
+      left: 350px;
+      height: 120px;
+      width: 120px; }
+    section .circles :nth-child(8) {
+      top: 200px;
+      left: 400px;
+      height: 250px;
+      width: 250px; }
+  section .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%; }
+    section .menu nav {
+      font-family: poppins black, sans-serif;
+      font-size: 95px;
+      font-weight: 1200;
+      text-transform: uppercase;
+      color: #D0F1D5;
+      -webkit-text-stroke: 1px;
+      -webkit-text-stroke-color: #EE6055; }
+      section .menu nav ul {
+        list-style: none; }
+    section .menu .title h1 {
+      font-family: poppins black, sans-serif;
+      font-size: 165px;
+      font-weight: 1200;
+      text-transform: uppercase;
+      color: #EE6055;
+      text-align: center; }
+
+@keyframes spanFadeIn {
+  0% {
+    transform: translateY(100%); }
+  100% {
+    transform: translateY(0%); } }
+
+/*# sourceMappingURL=style.css.map */
