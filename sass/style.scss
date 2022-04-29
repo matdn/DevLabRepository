@@ -1,8 +1,22 @@
+@import "abstract/variables",
+    "abstract/mixins",
+    "components/3D";
 
 *{
     margin: 0;
     padding: 0;
-    background-color: #D0F1D5;
+    background-color: #D0EADF;
+}
+body{
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+}
+h1, h2{
+    font-family: poppins;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #EE6055;
 }
 section{
     height: 100vh;
@@ -18,38 +32,37 @@ section{
             display: flex;
             justify-content: center;
             width: 100%;
-            
         }
         :nth-child(1){
             animation: spanFadeIn 1000ms ease;
         }
         :nth-child(2){
-            animation: spanFadeIn 1100ms ease;
+            animation: spanFadeIn 1200ms ease;
         }
         :nth-child(3){
-            animation: spanFadeIn 1300ms ease;
-        }
-        :nth-child(4){
             animation: spanFadeIn 1400ms ease;
         }
-        :nth-child(5){
-            animation: spanFadeIn 1500ms ease;
-        }
-        :nth-child(6){
+        :nth-child(4){
             animation: spanFadeIn 1600ms ease;
         }
-        :nth-child(7){
-            animation: spanFadeIn 1700ms ease;
-        }
-        :nth-child(8){
+        :nth-child(5){
             animation: spanFadeIn 1800ms ease;
         }
+        :nth-child(6){
+            animation: spanFadeIn 2000ms ease;
+        }
+        :nth-child(7){
+            animation: spanFadeIn 2200ms ease;
+        }
+        :nth-child(8){
+            animation: spanFadeIn 2400ms ease;
+        }
         :nth-child(9){
-            animation: spanFadeIn 1900ms ease;
+            animation: spanFadeIn 2600ms ease;
         }
         h1{
             font-family: poppins black, sans-serif;
-            font-size: 115px;
+            font-size: 135px;
             font-weight: 1200;
             text-transform: uppercase;
             color:#EE6055;
@@ -63,21 +76,19 @@ section{
                     animation: spanFadeIn 1000ms ease;
                 }
             }
-
         }
     }
     .circles{
-        height: 100vh;
         width: 100%;
         position: relative;
-        background-color: blue;
+        display: flex;
+        background-color:transparent;
         div{
             height: 150px;
             width: 150px;
             background-color: #EE6055;
             border-radius: 200px;
-            
-            
+            position: absolute;
         }
         :nth-child(1){
             bottom: 300px;
@@ -129,12 +140,13 @@ section{
         justify-content: center;
         align-items: center;
         gap:20%;
+        
         nav{
             font-family: poppins black, sans-serif;
             font-size: 95px;
             font-weight: 1200;
             text-transform: uppercase;
-            color: #D0F1D5;
+            color: #D0EADF;
             -webkit-text-stroke: 1px;
             -webkit-text-stroke-color: #EE6055;
             ul{
@@ -152,8 +164,245 @@ section{
             }
         }
     }
+    .click{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            position: absolute;
+        }
+        :nth-child(1){
+            z-index: 2;            
+            height: 100px;
+            background-color: transparent;
+        }
+        :nth-child(2){
+            z-index: 1;            
+            height: 47px;
+        }
+    }
+}
+.title{
+    display: flex;
+}
+.panel{
+    background-color: #EE6055 !important;
+}
+.optique{
+    background-color: #D0EADF;
+    z-index: 10;
+    height: 130vh;
+    overflow: hidden;
+    padding-bottom: 200px;
+    img{
+        height: 0;
+        z-index: 200;
+    }
+}
+.menu_section{
+    height: 150vh;
+}
+.bubble{
+    height: 100vh;
+}
+.moveband{
+    display: flex;
+    height: 250vh;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    .scroll{
+        width: 100%;
+        display: flex;
+        div{
+            font-family: poppins;
+            font-size: 140px;
+            background-color:#EE6055;
+            white-space: nowrap;
+            font-weight: 900;
+            text-transform: uppercase;
+            animation: animate 40s linear infinite;
+            animation-delay: -40s;
+            span{
+                -webkit-text-stroke: 2px;
+                color:#EE6055;
+                -webkit-text-stroke-color:#D0EADF;
+                background-color:#EE6055;
+                border: none;
+            }
+        }
+        .bordered{
+            color:#EE6055;
+            border: solid 2px #EE6055;
+            background-color:#D0EADF;
+        }
+        div:nth-child(2){
+            animation: animate2 40s linear infinite;
+            animation-delay: -20s;
+        }
+    }
+    .text1{
+        transform: rotate(345deg) translateY(300px) translateX(-200px);
+    }
+    .text2{
+        transform: rotate(18deg) translateY(120px) translateX(-259px);
+    }
+    .text3{
+        transform: rotate(5deg) translateY(300px) translateX(-200px);
+    }
+    .text4{
+        transform: rotate(-2deg) translateY(-150px) translateX(-200px);
+    }
+    .text5{
+        transform: rotate(15deg) translateY(30px) translateX(-200px);
+    }
+}
+mark{
+    -webkit-text-stroke: 2px;
+    color:#D0EADF;
+    -webkit-text-stroke-color:#EE6055;
+}
+.eatvege{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img{
+        width: 40%;
+        height: 80%;
+        background-image: url("img/vegetables.png");
+        opacity: 0.5;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .text{
+        height: 60%;
+        width: 50%;
+        color: #EE6055;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        h1{
+            color:#EE6055;
+            font-size: 160px;
+            line-height: 120px;
+        }
+        .multiply{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            h2{
+                position: absolute;
+                top: 20px;
+                font-size: 110px;
+                -webkit-text-stroke: 2px;
+                color:#D0EADF;
+                -webkit-text-stroke-color:#EE6055;
+                background-color: transparent;
+            }
+            .strong1{
+                z-index: 5;
+            }
+            .strong2{
+                opacity: 0.8;
+                z-index: 4;
+            }
+            .strong3{
+                opacity: 0.6;
+                z-index: 3;
+            }
+            .strong4{
+                opacity: 0.4;
+                z-index: 2;
+            }
+            .strong5{
+                opacity: 0.2;
+                z-index: 1;
+            }
+        }
+    }
+}
+.threeD{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width:300vw !important;
+    overflow: hidden;
+    z-index: 1000;
+    background-color: #EE6055;
+    .recyclable{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #EE6055;
+    }
+    .horizontal{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        background-color: #1A1618;
+        .img2{
+            background-image: url('img/blueberryjoin.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 65%;
+            width: 30%;
+            transform: rotateX(-7%);
+            border: none;
+        }
+    }
+}
+.newBack
+.panel{
+    width: 100vw;
 }
 
+.transition{
+    background-image: url('img/backgroundDurable.png');
+    transform: translateY(4px);
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes animate{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes animate2{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
 @keyframes spanFadeIn{
     0% {
         transform: translateY(100%);
@@ -161,4 +410,4 @@ section{
     100% {
         transform: translateY(0%);
     }
-}
+}       

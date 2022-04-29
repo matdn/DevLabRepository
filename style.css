@@ -1,7 +1,94 @@
+.About3D {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-delay: 2s;
+  gap: 45px;
+  height: 100px;
+  background-color: #EE6055; }
+  .About3D .btn3d {
+    font-family: poppins;
+    font-size: 105px;
+    width: 100px;
+    height: 140px;
+    perspective: 800px;
+    /*&:hover {
+        & > .btn__flip {
+            transform: rotateX(-90deg);
+        }
+    }*/ }
+    .About3D .btn3d .btn__flip {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform-style: preserve-3d;
+      transform-origin: center bottom 70px;
+      transition: transform 1s;
+      transform: rotateX(0deg);
+      text-decoration: none; }
+      .About3D .btn3d .btn__flip .btn__flip--off {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotateX(0deg) translateZ(70px);
+        -webkit-text-stroke: 2px;
+        color: #EE6055;
+        -webkit-text-stroke-color: #D0EADF;
+        text-decoration: none;
+        background-color: #EE6055; }
+      .About3D .btn3d .btn__flip .btn__flip--on {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotateX(90deg) translateZ(70px);
+        color: #D0EADF;
+        text-decoration: none;
+        background-color: #EE6055 !important; }
+    .About3D .btn3d .btn__flip1 {
+      transition-delay: 100ms; }
+    .About3D .btn3d .btn__flip2 {
+      transition-delay: 200ms; }
+    .About3D .btn3d .btn__flip3 {
+      transition-delay: 300ms; }
+    .About3D .btn3d .btn__flip4 {
+      transition-delay: 400ms; }
+    .About3D .btn3d .btn__flip5 {
+      transition-delay: 500ms; }
+    .About3D .btn3d .btn__flip6 {
+      transition-delay: 600ms; }
+    .About3D .btn3d .btn__flip7 {
+      transition-delay: 700ms; }
+    .About3D .btn3d .btn__flip8 {
+      transition-delay: 800ms; }
+
+.space {
+  height: 100px; }
+
 * {
   margin: 0;
   padding: 0;
-  background-color: #D0F1D5; }
+  background-color: #D0EADF; }
+
+body {
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden; }
+
+h1, h2 {
+  font-family: poppins;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #EE6055; }
 
 section {
   height: 100vh;
@@ -20,24 +107,24 @@ section {
     section .head :nth-child(1) {
       animation: spanFadeIn 1000ms ease; }
     section .head :nth-child(2) {
-      animation: spanFadeIn 1100ms ease; }
+      animation: spanFadeIn 1200ms ease; }
     section .head :nth-child(3) {
-      animation: spanFadeIn 1300ms ease; }
-    section .head :nth-child(4) {
       animation: spanFadeIn 1400ms ease; }
-    section .head :nth-child(5) {
-      animation: spanFadeIn 1500ms ease; }
-    section .head :nth-child(6) {
+    section .head :nth-child(4) {
       animation: spanFadeIn 1600ms ease; }
-    section .head :nth-child(7) {
-      animation: spanFadeIn 1700ms ease; }
-    section .head :nth-child(8) {
+    section .head :nth-child(5) {
       animation: spanFadeIn 1800ms ease; }
+    section .head :nth-child(6) {
+      animation: spanFadeIn 2000ms ease; }
+    section .head :nth-child(7) {
+      animation: spanFadeIn 2200ms ease; }
+    section .head :nth-child(8) {
+      animation: spanFadeIn 2400ms ease; }
     section .head :nth-child(9) {
-      animation: spanFadeIn 1900ms ease; }
+      animation: spanFadeIn 2600ms ease; }
     section .head h1 {
       font-family: poppins black, sans-serif;
-      font-size: 115px;
+      font-size: 135px;
       font-weight: 1200;
       text-transform: uppercase;
       color: #EE6055;
@@ -49,10 +136,10 @@ section {
           display: block;
           animation: spanFadeIn 1000ms ease; }
   section .circles {
-    height: 100vh;
     width: 100%;
     position: relative;
-    background-color: blue; }
+    display: flex;
+    background-color: transparent; }
     section .circles div {
       height: 150px;
       width: 150px;
@@ -103,7 +190,7 @@ section {
       font-size: 95px;
       font-weight: 1200;
       text-transform: uppercase;
-      color: #D0F1D5;
+      color: #D0EADF;
       -webkit-text-stroke: 1px;
       -webkit-text-stroke-color: #EE6055; }
       section .menu nav ul {
@@ -115,7 +202,198 @@ section {
       text-transform: uppercase;
       color: #EE6055;
       text-align: center; }
+  section .click {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    section .click img {
+      position: absolute; }
+    section .click :nth-child(1) {
+      z-index: 2;
+      height: 100px;
+      background-color: transparent; }
+    section .click :nth-child(2) {
+      z-index: 1;
+      height: 47px; }
 
+.title {
+  display: flex; }
+
+.panel {
+  background-color: #EE6055 !important; }
+
+.optique {
+  background-color: #D0EADF;
+  z-index: 10;
+  height: 130vh;
+  overflow: hidden;
+  padding-bottom: 200px; }
+  .optique img {
+    height: 0;
+    z-index: 200; }
+
+.menu_section {
+  height: 150vh; }
+
+.bubble {
+  height: 100vh; }
+
+.moveband {
+  display: flex;
+  height: 250vh;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; }
+  .moveband .scroll {
+    width: 100%;
+    display: flex; }
+    .moveband .scroll div {
+      font-family: poppins;
+      font-size: 140px;
+      background-color: #EE6055;
+      white-space: nowrap;
+      font-weight: 900;
+      text-transform: uppercase;
+      animation: animate 40s linear infinite;
+      animation-delay: -40s; }
+      .moveband .scroll div span {
+        -webkit-text-stroke: 2px;
+        color: #EE6055;
+        -webkit-text-stroke-color: #D0EADF;
+        background-color: #EE6055;
+        border: none; }
+    .moveband .scroll .bordered {
+      color: #EE6055;
+      border: solid 2px #EE6055;
+      background-color: #D0EADF; }
+    .moveband .scroll div:nth-child(2) {
+      animation: animate2 40s linear infinite;
+      animation-delay: -20s; }
+  .moveband .text1 {
+    transform: rotate(345deg) translateY(300px) translateX(-200px); }
+  .moveband .text2 {
+    transform: rotate(18deg) translateY(120px) translateX(-259px); }
+  .moveband .text3 {
+    transform: rotate(5deg) translateY(300px) translateX(-200px); }
+  .moveband .text4 {
+    transform: rotate(-2deg) translateY(-150px) translateX(-200px); }
+  .moveband .text5 {
+    transform: rotate(15deg) translateY(30px) translateX(-200px); }
+
+mark {
+  -webkit-text-stroke: 2px;
+  color: #D0EADF;
+  -webkit-text-stroke-color: #EE6055; }
+
+.eatvege {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .eatvege .img {
+    width: 40%;
+    height: 80%;
+    background-image: url("img/vegetables.png");
+    opacity: 0.5;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
+  .eatvege .text {
+    height: 60%;
+    width: 50%;
+    color: #EE6055;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; }
+    .eatvege .text h1 {
+      color: #EE6055;
+      font-size: 160px;
+      line-height: 120px; }
+    .eatvege .text .multiply {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+      .eatvege .text .multiply h2 {
+        position: absolute;
+        top: 20px;
+        font-size: 110px;
+        -webkit-text-stroke: 2px;
+        color: #D0EADF;
+        -webkit-text-stroke-color: #EE6055;
+        background-color: transparent; }
+      .eatvege .text .multiply .strong1 {
+        z-index: 5; }
+      .eatvege .text .multiply .strong2 {
+        opacity: 0.8;
+        z-index: 4; }
+      .eatvege .text .multiply .strong3 {
+        opacity: 0.6;
+        z-index: 3; }
+      .eatvege .text .multiply .strong4 {
+        opacity: 0.4;
+        z-index: 2; }
+      .eatvege .text .multiply .strong5 {
+        opacity: 0.2;
+        z-index: 1; }
+
+.threeD {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 300vw !important;
+  overflow: hidden;
+  z-index: 1000;
+  background-color: #EE6055; }
+  .threeD .recyclable {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EE6055; }
+  .threeD .horizontal {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    background-color: #1A1618; }
+    .threeD .horizontal .img2 {
+      background-image: url("img/blueberryjoin.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 65%;
+      width: 30%;
+      transform: rotateX(-7%);
+      border: none; }
+
+.newBack
+.panel {
+  width: 100vw; }
+
+.transition {
+  background-image: url("img/backgroundDurable.png");
+  transform: translateY(4px);
+  background-size: cover;
+  height: 600px;
+  width: 100%; }
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(-100%); } }
+@keyframes animate2 {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-200%); } }
 @keyframes spanFadeIn {
   0% {
     transform: translateY(100%); }

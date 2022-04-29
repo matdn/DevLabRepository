@@ -1,0 +1,74 @@
+.About3D{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-delay: 2s;
+    gap: 45px;
+    height: 100px;
+    background-color: #EE6055;
+    .btn3d {
+    font-family: poppins;
+    font-size: 105px;
+    width: $btn-width;
+    height: $btn-height;
+    perspective: $persp;
+    /*&:hover {
+        & > .btn__flip {
+            transform: rotateX(-90deg);
+        }
+    }*/
+    .btn__flip {
+        @include facet; 
+        transform-style: preserve-3d;
+        transform-origin: center bottom ($btn-height/2);
+        transition: transform 1s;
+        transform: rotateX(0deg);
+        text-decoration:none; 
+        
+        .btn__flip--off {
+            @include facet;
+            transform: rotateX(0deg) translateZ($btn-height/2);
+            -webkit-text-stroke: 2px;
+            color:#EE6055;
+            -webkit-text-stroke-color:#D0EADF;
+            text-decoration:none; 
+            background-color: #EE6055;
+        }
+        .btn__flip--on {
+            @include facet;
+            transform: rotateX(90deg) translateZ($btn-height/2);
+            color: #D0EADF;
+            text-decoration:none; 
+            background-color: #EE6055 !important;
+        }
+    }
+    .btn__flip1{
+        transition-delay: 100ms;
+    }
+    .btn__flip2{
+        transition-delay: 200ms;
+    }
+    .btn__flip3{
+        transition-delay: 300ms;
+    }
+    .btn__flip4{
+        transition-delay: 400ms;
+    }
+    .btn__flip5{
+        transition-delay: 500ms;
+    }
+    .btn__flip6{
+        transition-delay: 600ms;
+    }
+    .btn__flip7{
+        transition-delay: 700ms;
+    }
+    .btn__flip8{
+        transition-delay: 800ms;
+    }
+}
+}
+.space {
+    height: 100px;
+}
